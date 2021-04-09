@@ -15,8 +15,8 @@ export class AppService {
     return this.http.get(url);
   }
 
-  getFolders(): Observable<unknown[]> {
-    const url = `${this.apiUrl}/folders`;
+  getFolders(id: number): Observable<unknown[]> {
+    const url = `${this.apiUrl}/users/${id}`;
     return this.http.get<unknown[]>(url);
   }
 }

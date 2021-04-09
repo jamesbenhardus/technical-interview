@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { folders } from './data/folders';
+import { userData } from './data/user-data';
 
 @Injectable()
 export class AppService {
@@ -7,7 +7,8 @@ export class AppService {
     return { message: 'Welcome to api!' };
   }
 
-  getFolders() {
-    return folders;
+  getUserData(userId: number) {
+    const user = userData.find((data) => data.userId === userId);
+    return user;
   }
 }

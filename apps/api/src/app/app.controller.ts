@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
 import { AppService } from './app.service';
 
@@ -11,8 +11,8 @@ export class AppController {
     return this.appService.getData();
   }
 
-  @Get('folders')
-  getFolders() {
-    return this.appService.getFolders();
+  @Get('users/:id')
+  getUserData(@Param() params) {
+    return this.appService.getUserData(params.id);
   }
 }

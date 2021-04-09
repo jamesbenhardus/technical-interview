@@ -1,105 +1,40 @@
+# XILO Technical Assessment
 
+Thank you for your interest in XILO! In order to get a sense of your technical abilities, we would like you to complete this technical assessment. Please read the overview and guidelines, then choose a use case to implement.
 
-# TechnicalInterview
+## Guidelines
 
-This project was generated using [Nx](https://nx.dev).
+### Allowed Resources
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+Our goal in this assessment is to evaluate your technical abilities in as close to a "real world" context as possible. This means you are free to use Google, Stack Overflow, or any other resources you would like. The only restriction is that all work must be your own - please do not copy-paste substantial amounts of your solution or ask other individuals for help. We are not looking for a perfect solution, but an accurate representation of your abilities. To that end, we will expect you to be able to explain both how your solution works and why you may have chosen a particular approach. If you have questions or get stuck, we ask that you reach out to us for clarification or help - we will be happy to assist you.
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+### Time Expectations
 
-## Quick Start & Documentation
+Our expectation is that this assessment will take around an hour to complete. You may spend more time if you like, but you shouldn't spend much more than 2 hours at most on your assessment. Each use case has a main objective and optional objectives. If you complete the main objective within your allotted time you may choose to implement any of the optional objectives that you like.
 
-[Nx Documentation](https://nx.dev/angular)
+## Overview
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+You will be adding functionality to an online storage application, similar to Google Drive or Dropbox. Users of this application can upload files to be stored and organize their files in folders. Unfortunately, the upload feature for this application is still fairly buggy, so files and folders often get corrupted.
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+## Use Cases
 
-## Adding capabilities to your workspace
+Choose one of the following use cases to implement:
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+### Frontend - display directories
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+You will be implementing a feature that allows a user to view their files and folders in a web browser. Add functionality to the `ViewFilesComponent` to display the filesystem for a user.
 
-Below are our core plugins:
+#### Main Objective
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+- Load test data from the api using `AppService`
+- Display the files and folders for a user
+  - Folders should display the name of the folder
+  - Files should display the name of the file and the extension
+  - Users should be able to see all files and folders at the root level, as well as any files and folders in subdirectories
+  - Users should be able to see the structure of their filesystem and easily tell how many levels deep in the filesystem a particular file or folder is
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+#### Optional Objectives
 
-## Generate an application
-
-Run `ng g @nrwl/angular:app my-app` to generate an application.
-
-> You can use any of the plugins above to generate applications as well.
-
-When using Nx, you can create multiple applications and libraries in the same workspace.
-
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@technical-interview/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+- Add the ability to expand or collapse folders in the filesystem
+- Add icons for folders and each file type (.txt, .pdf, and .png)
+- Add the ability to search/filter the fileroom based on keywords
