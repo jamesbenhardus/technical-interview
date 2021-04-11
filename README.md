@@ -27,7 +27,9 @@ You will be implementing a feature that allows a user to view their files and fo
 #### Main Objective
 
 Implement the following design:
+
 ![xilo-tech-interview-objective-1](https://user-images.githubusercontent.com/12035748/114325335-2c8c7680-9af5-11eb-8588-2825a69b51a9.png)
+
 Requirements:
 - For each level of the filesystem, folders should be displayed before files
 - For each level of the filesystem, the list of folders and the list of files should each be alphabetized
