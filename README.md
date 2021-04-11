@@ -26,15 +26,17 @@ You will be implementing a feature that allows a user to view their files and fo
 
 #### Main Objective
 
-- Load test data from the api using `AppService`
-- Display the files and folders for a user
-  - Folders should display the name of the folder
-  - Files should display the name of the file and the extension
-  - Users should be able to see all files and folders at the root level, as well as any files and folders in subdirectories
-  - Users should be able to see the structure of their filesystem and easily tell how many levels deep in the filesystem a particular file or folder is
+Implement the following design:
+![xilo-tech-interview-objective-1](https://user-images.githubusercontent.com/12035748/114325335-2c8c7680-9af5-11eb-8588-2825a69b51a9.png)
+Requirements:
+- For each level of the filesystem, folders should be displayed before files
+- For each level of the filesystem, the list of folders and the list of files should each be alphabetized
+- The contents of each folder should initially be hidden. Clicking on the arrow should show the contents of the folder. Clicking on the arrow again should hide the contents of the folder
+- The arrow icon for a folder should change based on whether the contents of the folder are shown or hidden
+- Load data from the `getUserData` method on `AppService`
 
 #### Optional Objectives
 
-- Add the ability to expand or collapse folders in the filesystem
-- Add icons for folders and each file type (.txt, .pdf, and .png)
+- Show different icons for each file type
 - Add the ability to search/filter the fileroom based on keywords
+- Add the ability to add or remove folders and files. You do not have to worry about persisting these changes to the backend
