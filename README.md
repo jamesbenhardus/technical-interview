@@ -1,6 +1,6 @@
 # XILO Technical Assessment
 
-Thank you for your interest in XILO! In order to get a sense of your technical abilities, we would like you to complete this technical assessment. Please read the overview and guidelines, then choose a use case to implement.
+Thank you for your interest in XILO! In order to get a sense of your technical abilities, we would like you to complete this technical assessment. Please read the guidelines and setup instructions, then choose a use case to implement.
 
 ## Guidelines
 
@@ -10,6 +10,14 @@ Our goal in this assessment is to evaluate your technical abilities in as close 
 - Communicate with your team if you have questions or need clarification. We are happy to answer any questions you may have - the email we send you with the link to this assessment will contain the contact information of team members you may reach out to with questions.
 - Use the right tools for the job. If there is a third-party library or framework that you would like to use, you may do so, but be prepared to potentially explain what it does and why you chose to use it.
 - Code with quality in mind. We are looking for code that is not just functional, but is also easy to understand and maintain. The code should take into account validation and error handling, and have at least a few unit tests covering the main use cases.
+
+## Setup instructions
+
+1. Fork the repository to your personal Github account, then clone the repo
+2. Create a new branch for your work.
+3. Run `npm install` to install dependencies
+4. To serve the frontend app, run `npm run start-frontend`. To serve the backend api, run `npm run start-backend`
+5. To submit your completed assessment, create a pull request into the `main` branch on your fork and email us a link to the pull request.
 
 ## Overview
 
