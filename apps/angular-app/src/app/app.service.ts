@@ -35,8 +35,13 @@ export class AppService {
     return this.http.get(url);
   }
 
-  getUncorrupted(userId: number) {
-    const url = `${this.apiUrl}/health-check/uncorrupted/${userId}`;
+  getUncorrupted(userId: number, strict: boolean = true) {
+    const url = `${this.apiUrl}/health-check/uncorrupted/${userId}?strict=${strict}`;
     return this.http.get(url);
+  }
+
+  fixCorrupted(userId: number, items: any[]) {
+    const url = `${this.apiUrl}/health-check/fix-corrupted`;
+    return this.http.post(url, { items });
   }
 }
