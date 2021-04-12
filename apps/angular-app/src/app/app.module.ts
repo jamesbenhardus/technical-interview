@@ -12,6 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Route, RouterModule } from '@angular/router';
 import { HealthCheckComponent } from './health-check/health-check.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [
   { path: 'view-files', component: ViewFilesComponent },
@@ -30,6 +31,7 @@ const routes: Route[] = [
     MatSelectModule,
     MatFormFieldModule,
     RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [AppService],
   bootstrap: [AppComponent],

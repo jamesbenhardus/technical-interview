@@ -1,1 +1,70 @@
-<p>health-check works!</p>
+<div>Methods:</div>
+
+<div class="methods">
+  <div class="method">
+    <div class="request">
+      <div class="action">GET</div>
+      <div class="path">/health-check/is-corrupted</div>
+      <div class="params">
+        userId: <input type="number" [(ngModel)]="isCorruptedUserId" />
+      </div>
+    </div>
+    <div class="body"></div>
+    <button mat-raised-button color="primary" (click)="getIsCorrupted()">
+      Call API
+    </button>
+    <div class="response">
+      {{ isCorruptedUserIdResponse | json }}
+    </div>
+  </div>
+  <div class="method">
+    <div class="request">
+      <div class="action">POST</div>
+      <div class="path">/health-check/is-corrupted</div>
+    </div>
+    <div class="body">
+      <textarea
+        [(ngModel)]="isCorruptedFilesystem"
+        placeholder="Paste body here. Must be properly formatted JSON"
+      ></textarea>
+    </div>
+    <button mat-raised-button color="primary" (click)="postIsCorrupted()">
+      Call API
+    </button>
+    <div class="response">
+      {{ isCorruptedFilesystemResponse | json }}
+    </div>
+  </div>
+  <div class="method">
+    <div class="request">
+      <div class="action">GET</div>
+      <div class="path">/health-check/corrupted</div>
+      <div class="params">
+        userId: <input type="number" [(ngModel)]="corruptedUserId" />
+      </div>
+    </div>
+    <div class="body"></div>
+    <button mat-raised-button color="primary" (click)="getCorrupted()">
+      Call API
+    </button>
+    <div class="response">
+      {{ corruptedResponse | json }}
+    </div>
+  </div>
+  <div class="method">
+    <div class="request">
+      <div class="action">GET</div>
+      <div class="path">/health-check/uncorrupted</div>
+      <div class="params">
+        userId: <input type="number" [(ngModel)]="uncorruptedUserId" />
+      </div>
+    </div>
+    <div class="body"></div>
+    <button mat-raised-button color="primary" (click)="getUncorrupted()">
+      Call API
+    </button>
+    <div class="response">
+      {{ uncorruptedResponse | json }}
+    </div>
+  </div>
+</div>

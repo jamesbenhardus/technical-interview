@@ -15,8 +15,28 @@ export class AppService {
     return this.http.get(url);
   }
 
-  getFolders(id: number): Observable<unknown[]> {
-    const url = `${this.apiUrl}/users/${id}`;
-    return this.http.get<unknown[]>(url);
+  getUserData(userId: number) {
+    const url = `${this.apiUrl}/users/${userId}`;
+    return this.http.get(url);
+  }
+
+  isCorruptedByUser(userId: number) {
+    const url = `${this.apiUrl}/health-check/is-corrupted/${userId}`;
+    return this.http.get(url);
+  }
+
+  isCorruptedByFilesystem(filesystem: any) {
+    const url = `${this.apiUrl}/health-check/is-corrupted`;
+    return this.http.post(url, { filesystem });
+  }
+
+  getCorrupted(userId: number) {
+    const url = `${this.apiUrl}/health-check/corrupted/${userId}`;
+    return this.http.get(url);
+  }
+
+  getUncorrupted(userId: number) {
+    const url = `${this.apiUrl}/health-check/uncorrupted/${userId}`;
+    return this.http.get(url);
   }
 }
