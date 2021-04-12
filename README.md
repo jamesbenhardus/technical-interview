@@ -47,11 +47,11 @@ Requirements:
 - Add the ability to search/filter the fileroom based on keywords
 - Add the ability to add or remove folders and files. You do not have to worry about persisting these changes to the backend
 
-### Backend Use Case - Health Check
+## Backend Use Case - Health Check
 
 Unfortunately, the uploading functionality in the application has a lot of bugs, so users' filesystems often get corrupted. You will be implementing a feature that scans a user's filesystem to determine if there are any corrupted files or folders. Corrupted files and folders are represented in the test data by an optional property `corrupted` that is set to true for a corrupted file or folder, and is set to false or is not present for uncorrupted files and folders.
 
-#### Main Objective
+### Main Objective
 
 Create a new controller called `HealthCheckController` in the api app. Add the following endpoints to the controller:
 
@@ -64,7 +64,7 @@ Create a new controller called `HealthCheckController` in the api app. Add the f
 
 To help verify your work, the `angular-app` frontend contains a UI for calling the endpoints and inspecting the responses.
 
-#### Optional Objectives
+### Optional Objectives
 
 - Extend the `health-check/uncorrupted-filesystem` endpoint to accept an additonal optional parameter `strict`, a boolean denoting whether to operate in strict mode. If strict is true, the endpoint behaves as described in the main objective. If `strict` is false, then corrupted folders are included in the filtered filesystem, but only if they contain uncorrupted files or folders, and only the uncorrupted content of the folder is included in the filtered filesystem.
 - Add the following new endpoint:
